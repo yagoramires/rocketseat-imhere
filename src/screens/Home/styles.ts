@@ -49,6 +49,26 @@ const styles = StyleSheet.create({
     color: '#FFF',
     fontSize: 24,
   },
+
+  cleanButton: {
+    backgroundColor: '#E23C44',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 16,
+    borderRadius: 5,
+    marginTop: 8,
+  },
+
+  cleanText: {
+    color: '#FFF',
+    fontSize: 16,
+  },
+
+  emptyText: {
+    color: '#FFF',
+    fontSize: 14,
+    textAlign: 'center',
+  },
 });
 
 export default styles;
