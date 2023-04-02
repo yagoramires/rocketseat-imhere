@@ -20,6 +20,7 @@ const Home = () => {
         'Participante já registrado',
         'Já existe um participante na lista com esse nome.',
       );
+      setParticipant('');
     } else {
       setParticipants([...participants, participant.toLowerCase()]);
       setParticipant('');
@@ -42,9 +43,9 @@ const Home = () => {
     ]);
   };
 
-  const removeParticipant = (participant: string) => {
+  const removeParticipant = (name: string) => {
     const filter = participants.filter(
-      (name) => name !== participant.toLowerCase(),
+      (participant) => participant !== name.toLowerCase(),
     );
 
     return filter;
@@ -66,7 +67,7 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.eventName}>Nome do evento:</Text>
+      <Text style={styles.eventName}>Evento</Text>
       <Text style={styles.eventDate}>Sexta, 7 de Abril de 2023.</Text>
       <View style={styles.formContainer}>
         <TextInput
